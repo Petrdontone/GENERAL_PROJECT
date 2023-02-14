@@ -34,13 +34,17 @@ jobs:
     steps:
       - name: Run a one-line script
         run: |
-         echo Hello, world!
-         ls -la 
-         pwd && cd GENERAL_PROJECT
+         git clone https://github.com/Petrdontone/GENERAL_PROJECT
+         cd GENERAL_PROJECT
          pwd
          ls -la
+         echo Hello, world!
+         docker build .
+         pwd
+         pip install -r requirements.txt 
+         mkdir folder && pwd
+         sh who_answers.sh
          python -m jira_helper
-         mkdir folder1 && cd folder1
 
       - name: Run a multi-line script
         run: |
