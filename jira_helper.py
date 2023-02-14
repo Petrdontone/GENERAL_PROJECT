@@ -6,7 +6,7 @@ jira = JIRA(options=jira_options, basic_auth=(USERNAME, TOKEN))
 jql = 'project = SCRUM'
 result_issues = jira.search_issues(jql_str=jql, maxResults=100)
 for issue_list in result_issues:
-    print(issue_list.fields)
+    print(issue_list.fields.reporter)
 
 #
 issue_dict = {
@@ -19,3 +19,4 @@ issue_dict = {
 
 new_issue = jira.create_issue(fields=issue_dict)
 print(new_issue)
+
