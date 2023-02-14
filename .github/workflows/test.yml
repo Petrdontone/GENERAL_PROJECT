@@ -10,10 +10,9 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v3
       - name: Run a one-line script
         run: |
-         git clone https://github.com/Petrdontone/GENERAL_PROJECT
-         cd GENERAL_PROJECT
          pwd
          ls -la
          echo Hello, world!
@@ -32,10 +31,9 @@ jobs:
     runs-on: ubuntu-latest
     needs: build
     steps:
+      - uses: actions/checkout@v3
       - name: Run a one-line script
         run: |
-         git clone https://github.com/Petrdontone/GENERAL_PROJECT
-         cd GENERAL_PROJECT
          pwd
          ls -la
          echo Hello, world!
