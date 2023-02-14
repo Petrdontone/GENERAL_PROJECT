@@ -27,7 +27,7 @@ jobs:
       - name: Run a one-line script
         run: |
          echo Hello, world!
-         pwd && cd GENERAL_PROJECT
+         pwd && cd ..
          pwd
          ls -la
          pip install jira
