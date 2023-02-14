@@ -20,7 +20,7 @@ jobs:
          docker build .
          pwd
          pip install -r requirements.txt 
-         mkdir folder && cd folder && pwd
+         mkdir folder && pwd
          sh who_answers.sh 
 
       - name: Run a multi-line script
