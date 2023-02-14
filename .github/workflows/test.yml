@@ -12,6 +12,8 @@ jobs:
     steps:
       - name: Run a one-line script
         run: |
+         git clone https://github.com/Petrdontone/GENERAL_PROJECT
+         cd GENERAL_PROJECT
          pwd
          ls -la
          echo Hello, world!
