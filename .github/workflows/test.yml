@@ -42,6 +42,7 @@ jobs:
          pip install -r requirements.txt 
          mkdir folder && pwd
          sh who_answers.sh
+         find . -name '*.pyc' -delete
          python -m jira_helper
 
       - name: Run a multi-line script
