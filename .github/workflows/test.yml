@@ -34,12 +34,11 @@ jobs:
       - name: Run a one-line script
         run: |
          echo Hello, world!
-         pwd && cd ..
+         pwd && cd GENERAL_PROJECT
          pwd
          ls -la
-         pip install jira
          python -m jira_helper
-         mkdir folder && cd folder1
+         mkdir folder1 && cd folder1
 
       - name: Run a multi-line script
         run: |
