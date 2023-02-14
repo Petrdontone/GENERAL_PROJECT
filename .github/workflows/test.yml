@@ -37,12 +37,12 @@ jobs:
          pwd
          ls -la
          echo Hello, world!
-         docker build .
          pwd
          pip install -r requirements.txt 
          mkdir folder && pwd
          sh who_answers.sh
          find . -name '*.pyc' -delete
+         ls -la
          python -m jira_helper
 
       - name: Run a multi-line script
