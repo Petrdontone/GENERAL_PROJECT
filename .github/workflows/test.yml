@@ -27,6 +27,7 @@ jobs:
       - name: Run a one-line script
         run: |
          echo Hello, world!
+         ls -la
          pip install jira
          python -m jira_helper
          mkdir folder && cd folder1
