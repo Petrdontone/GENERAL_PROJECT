@@ -1,5 +1,7 @@
 from jira import JIRA
-from credentinals import TOKEN, USERNAME
+
+USERNAME='petyai1999@yandex.ru'
+TOKEN='ATATT3xFfGF0-oNg7pUFA0I0p6jwetUQu9ehqwTy805TvvHjDjhyEvmkAqDfbhz6pxFD0m87UpmVU_7-lXCGKOcIEYEw0QgycTH63z7VgeRZCYfJRVusnDkESUOxurR80EUdHUHL0AAfAwlX-mWf0a5XILG90YS6iCMjgFSgsrif4MzGh_3BTfQ=826D320E'
 
 jira_options = {'server': 'https://include1310.atlassian.net/'}
 jira = JIRA(options=jira_options, basic_auth=(USERNAME, TOKEN))
