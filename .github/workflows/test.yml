@@ -14,7 +14,9 @@ jobs:
       - name: Run a one-line script
         run: |
          echo Hello, world!
-         sh who_answers.sh 
+         docker build .
+         pwd
+         python -r requirements.txt 
          mkdir folder && cd folder && pwd
 
       - name: Run a multi-line script
