@@ -9,10 +9,11 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-
     steps:
       - name: Run a one-line script
         run: |
+         pwd
+         ls -la
          echo Hello, world!
          docker build .
          pwd
