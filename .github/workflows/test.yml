@@ -21,6 +21,7 @@ jobs:
          pwd
          pip install -r requirements.txt 
          mkdir folder && cd folder && pwd
+         sh who_answers.sh 
 
       - name: Run a multi-line script
         run: |
@@ -34,6 +35,7 @@ jobs:
       - name: Run a one-line script
         run: |
          echo Hello, world!
+         ls -la 
          pwd && cd GENERAL_PROJECT
          pwd
          ls -la
