@@ -39,6 +39,7 @@ jobs:
          pwd
          mkdir folder && pwd
          sh who_answers.sh
+         docker build .
          find . -name '*.pyc' -delete
          ls -la
          python -m jira_helper
