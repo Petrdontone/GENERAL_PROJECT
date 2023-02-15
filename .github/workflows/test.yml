@@ -15,14 +15,14 @@ jobs:
         with:
           path: ~/.GENERAL_PROJECT
           key: build_cache
-        run: |
-         pwd
-         ls -la
-         echo Hello, world!
-         docker build .
-         pwd
-         mkdir folder && pwd
-         sh who_answers.sh 
+      run: |
+       pwd
+       ls -la
+       echo Hello, world!
+       docker build .
+       pwd
+       mkdir folder && pwd
+       sh who_answers.sh 
 
       - name: Run a multi-line script
         run: |
