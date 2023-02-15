@@ -1,7 +1,7 @@
-# Container image that runs your code
-FROM python:3.8
-
-# Copies your code file from your action repository to the filesystem path `/` of the container
-COPY ./ .
+FROM python:3.7.9
+WORKDIR /csr
+COPY . /csr/
+RUN python3 -m pip install -r requirements.txt
+COPY main.py /csr/
 
 

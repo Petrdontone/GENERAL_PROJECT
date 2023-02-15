@@ -1,11 +1,11 @@
 from jira import JIRA
 
 USERNAME='petyai1999@yandex.ru'
-TOKEN='ATATT3xFfGF0-oNg7pUFA0I0p6jwetUQu9ehqwTy805TvvHjDjhyEvmkAqDfbhz6pxFD0m87UpmVU_7-lXCGKOcIEYEw0QgycTH63z7VgeRZCYfJRVusnDkESUOxurR80EUdHUHL0AAfAwlX-mWf0a5XILG90YS6iCMjgFSgsrif4MzGh_3BTfQ=826D320E'
+TOKEN='ATATT3xFfGF0PrZMMwwxfX4d1s8U5U6jq-Tjs9g9x98y54eb0GbxViC94etAZu_k81rjQizccMMwy-rRA1X--52Qvr13KkAR5fqbBpM49flte-vC0DpLXricO54MK69_Z6cFzVU4qK7-KgVBsIhfUPoZu0wRugH-th-6FlYIFNIeVIEuVqKvIZ4=F61F876A'
 
 jira_options = {'server': 'https://include1310.atlassian.net/'}
 jira = JIRA(options=jira_options, basic_auth=(USERNAME, TOKEN))
-jql = 'project = SCRUM'
+jql = 'project = SCRUM ORDER BY Rank ASC'
 result_issues = jira.search_issues(jql_str=jql, maxResults=100)
 for issue_list in result_issues:
     print(issue_list.fields.reporter)
