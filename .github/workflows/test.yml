@@ -42,7 +42,6 @@ jobs:
          docker build .
          find . -name '*.pyc' -delete
          ls -la
-         python -m jira_helper
 
       - name: Run a multi-line script
         run: |
