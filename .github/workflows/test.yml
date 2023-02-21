@@ -1,0 +1,49 @@
+name: CI
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Run a one-line script
+        run: |
+         pwd
+         ls -la
+         echo Hello, world!
+         docker build .
+         pwd
+         mkdir folder && pwd
+         sh who_answers.sh 
+
+      - name: Run a multi-line script
+        run: |
+          echo Add other actions to build,
+          echo test, and deploy your project.
+
+  jira_script:
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - uses: actions/checkout@v3
+      - name: Run a one-line script
+        run: |
+         pwd
+         ls -la
+         echo Hello, world!
+         pwd
+         mkdir folder && pwd
+         sh who_answers.sh
+         docker build .
+         find . -name '*.pyc' -delete
+         ls -la
+
+      - name: Run a multi-line script
+        run: |
+          echo Add other actions to build,
+          echo test, and deploy your project.          
