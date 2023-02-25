@@ -1,3 +1,4 @@
+#!/bin/bash
 if [ -e students.txt ]; then
   rm students.txt
   echo "Список студентов очищен"

@@ -1,3 +1,4 @@
+#!/bin/bash
 Time=$(date "+%H:%M:%S")
 Day=$(env LC_TIME=ru_RU.UTF-8 date "+%A")
 echo "$Day"
