@@ -49,15 +49,15 @@ jobs:
           echo Add other actions to build,
           echo test, and deploy your project.         
 
-#  sveta job:
-#    runs-on: linux-latest
-#    steps:
-#      - uses: actions/checkout@v3
-#      - name: Svetlana
-#        run: |
-#          pwd
-#          ls -la
-#          mkdir Sveta_folder && mv ./GameScript.sh ./Sveta_folder && cd Sveta_folder
-#          sh GameScript.sh
-#          ls -la
+  sveta job:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Svetlana
+        run: |
+          pwd
+          ls -la
+          mkdir Sveta_folder && mv ./GameScript.sh ./Sveta_folder && cd Sveta_folder
+          sh GameScript.sh
+          ls -la
           
