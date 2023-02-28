@@ -2,8 +2,8 @@
 
 echo "Enter any number"
 read n
-
-if [[ ( $n -eq 15 || $n  -eq 69 ) ]]
+echo "5"
+if [[  $n -eq 15 || $n  -eq 69  ]]
 then
 echo "You won the game"
 else
