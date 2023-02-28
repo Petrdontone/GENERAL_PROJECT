@@ -2,9 +2,9 @@ name: CI
 
 on:
   push:
-    branches: [ "main" ]
+    branches: [ "main", "develop" ]
   pull_request:
-    branches: [ "main" ]
+    branches: [ "main", "develop" ]
 
 jobs:
   build:
@@ -46,4 +46,17 @@ jobs:
       - name: Run a multi-line script
         run: |
           echo Add other actions to build,
-          echo test, and deploy your project.          
+          echo test, and deploy your project.   
+
+  lera jobs:
+    runs-on: ubuntu-latest
+    needs: jira_script
+    steps:
+      - uses: actions/checkout@v3
+      - name: Lera script
+        run: |
+          pwd
+          ls -la
+          mkdir my_script && mw ./who_answers.sh ./my_script && cd my_script
+          sh who_answer.sh
+          ls -la
