@@ -56,7 +56,7 @@ jobs:
       - name: Svetlana
         run: |
           pwd
-          ls -la
+          ls -la 
           mkdir Sveta_folder && mv ./GameScript.sh ./Sveta_folder && cd Sveta_folder
           sh GameScript.sh       
           ls -la
