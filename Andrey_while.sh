@@ -3,10 +3,10 @@ again=yes #присваиваем значение "yes" переменной ag
 while [ "$again" = "yes" ] #Будем выполнять цикл, пока $again будет равно "yes"
 do
 echo "Please enter a name:"
-read name
+read -r name
 echo "The name you entered is $name"
 
 echo "Do you wish to continue? (yes/no)"
-read again
+read -r again
 done
 echo "Bye-Bye"
