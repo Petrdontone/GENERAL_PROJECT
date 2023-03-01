@@ -58,3 +58,15 @@ jobs:
           mkdir Sveta_folder && mv ./GameScript.sh ./Sveta_folder && cd Sveta_folder
           sh GameScript.sh
           ls -la
+
+  Lera_job:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Lera
+        run: |
+          pwd
+          ls -la
+          mkdir Lera_folder && mv ./who_answer.sh ./Lera_folder && cd Lera_folder
+          sh who_answer.sh
+          ls -la        
