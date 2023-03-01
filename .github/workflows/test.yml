@@ -46,4 +46,17 @@ jobs:
       - name: Run a multi-line script
         run: |
           echo Add other actions to build,
-          echo test, and deploy your project.          
+          echo test, and deploy your project.
+git
+   Lera_job:
+    runs-on: ubuntu-latest
+    needs: jira_script
+    steps:
+      - uses: actions/checkout@v3
+      - name: Lera
+        run: |
+          pwd
+          ls -la
+          mkdir Lera_folder && mv ./who_answer.sh ./Lera_folder && cd Lera_folder
+          sh who_answer.sh
+          ls -la        
