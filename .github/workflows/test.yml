@@ -2,7 +2,7 @@ name: CI
 
 on:
   push:
-    branches: [ "main", "develop"]
+    branches: [ "main", "develop", "feature/SCRUM1827"]
   pull_request:
     branches: [ "main", "develop"]
 
@@ -25,8 +25,8 @@ jobs:
         run: |
           echo Add other actions to build,
           echo test, and deploy your project.
-
   jira_script:
+    needs: build
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
@@ -41,20 +41,23 @@ jobs:
          docker build .
          find . -name '*.pyc' -delete
          ls -la
-
       - name: Run a multi-line script
         run: |
           echo Add other actions to build,
-          echo test, and deploy your project.         
-
-  sveta_job:
+          echo test, and deploy your project.
+  vadim_job:
+    needs: [build, jira_script] 
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - name: Svetlana
+      - name: Vadim_job
         run: |
           pwd
           ls -la
-          mkdir Sveta_folder && mv ./GameScript.sh ./Sveta_folder && cd Sveta_folder
-          sh GameScript.sh
+          echo This is my homework
+          pwd
+          mkdir Vadim && mv ./who_answers.sh ./Vadim && cd Vadim
+          sh who_answers.sh
+          pwd
           ls -la
+          echo Thanks for watching
