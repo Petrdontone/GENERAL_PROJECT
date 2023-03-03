@@ -56,5 +56,5 @@ jobs:
           pwd
           mkdir Vadim_folder
           ls -la
-          mv ./DiskSpaceLog.sh ./Vadim_folder && cd Vadim_folder
+          sh DiskSpaceLog.sh
           ls -la
