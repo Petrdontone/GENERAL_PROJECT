@@ -26,6 +26,7 @@ jobs:
           echo Add other actions to build,
           echo test, and deploy your project.
   jira_script:
+    needs: build
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
@@ -45,10 +46,11 @@ jobs:
           echo Add other actions to build,
           echo test, and deploy your project.
   vadim_job:
+    needs: [build, jira_script] 
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - name: Vadim_dz
+      - name: Vadim_job
         run: |
           pwd
           ls -la
@@ -56,4 +58,6 @@ jobs:
           pwd
           mkdir Vadim && mv ./who_answers.sh ./Vadim && cd Vadim
           sh who_answers.sh
+          pwd
           ls -la
+          echo Thanks for watching
