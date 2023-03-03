@@ -25,7 +25,6 @@ jobs:
         run: |
           echo Add other actions to build,
           echo test, and deploy your project.
-
   jira_script:
     runs-on: ubuntu-latest
     steps:
@@ -41,20 +40,19 @@ jobs:
          docker build .
          find . -name '*.pyc' -delete
          ls -la
-
       - name: Run a multi-line script
         run: |
           echo Add other actions to build,
-          echo test, and deploy your project.         
-
-  sveta_job:
+          echo test, and deploy your project.
+  vadim_job:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - name: Svetlana
+      - name: Vadim_dz
         run: |
           pwd
           ls -la
-          mkdir Sveta_folder && mv ./GameScript.sh ./Sveta_folder && cd Sveta_folder
-          sh GameScript.sh
+          echo This is my homework
+          pwd
+          mkdir Vadim_folder && mv ./DiskSpaceLog.sh ./Vadim_folder && cd Vadim_folder
           ls -la
