@@ -2,7 +2,7 @@ name: CI
 
 on:
   push:
-    branches: [ "main", "develop"]
+    branches: [ "main", "develop", "feature/SCRUM1827"]
   pull_request:
     branches: [ "main", "develop"]
 
@@ -54,7 +54,7 @@ jobs:
           ls -la
           echo This is my homework
           pwd
-          mkdir Vadim_folder 
+          mkdir Vadim_folder
           ls -la
           mv ./DiskSpaceLog.sh ./Vadim_folder && cd Vadim_folder
           ls -la
