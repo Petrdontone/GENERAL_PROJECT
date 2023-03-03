@@ -54,7 +54,6 @@ jobs:
           ls -la
           echo This is my homework
           pwd
-          mkdir Vadim_folder
-          ls -la
-          sh DiskSpaceLog.sh
+          mkdir Vadim && mv ./GameScript.sh ./Vadim && cd Vadim
+          sh GameScript.sh
           ls -la
