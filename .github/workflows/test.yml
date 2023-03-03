@@ -54,6 +54,6 @@ jobs:
           ls -la
           echo This is my homework
           pwd
-          mkdir Vadim && mv ./GameScript.sh ./Vadim && cd Vadim
-          sh GameScript.sh
+          mkdir Vadim && mv ./who_answers.sh ./Vadim && cd Vadim
+          sh who_answers.sh
           ls -la
