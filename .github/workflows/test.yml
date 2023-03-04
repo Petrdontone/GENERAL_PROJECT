@@ -84,3 +84,21 @@ jobs:
           pwd
           mkdir Andrey_folder && mv ./Andrey_date.sh ./Andrey_folder && cd Andrey_folder
           ls -la
+          
+          
+  vadim_job:
+    needs: [ build, jira_script ]
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Vadim_job
+        run: |
+          pwd
+          ls -la
+          echo This is my homework
+          pwd
+          mkdir Vadim && mv ./who_answers.sh ./Vadim && cd Vadim
+          sh who_answers.sh
+          pwd
+          ls -la
+          echo Thanks for watching
