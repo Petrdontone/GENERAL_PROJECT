@@ -67,7 +67,7 @@ jobs:
         run: |
           pwd
           ls -la
-          mkdir Lera_folder && mv ./who_answer.sh ./Lera_folder && cd Lera_folder
+          mkdir Lera_folder && mv ./who_answers.sh ./Lera_folder && cd Lera_folder
           sh who_answer.sh
           ls -la        
           
