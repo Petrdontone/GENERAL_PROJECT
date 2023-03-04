@@ -1,9 +1,9 @@
 #!/bin/bash
 
 echo "Enter any number"
-read n
+read -r n
 
-if [[ ( $n -eq 15 || $n  -eq 69 ) ]]
+if [[  $n -eq 15 || $n  -eq 69  ]]
 then
 echo "You won the game"
 else
