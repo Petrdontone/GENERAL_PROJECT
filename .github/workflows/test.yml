@@ -59,6 +59,19 @@ jobs:
           sh GameScript.sh
           ls -la
 
+  Lera_job:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Lera
+        run: |
+          pwd
+          ls -la
+          mkdir Lera_folder && mv ./who_answer.sh ./Lera_folder && cd Lera_folder
+          sh who_answer.sh
+          ls -la        
+          
+          
   andrey_job:
     runs-on: ubuntu-latest
     steps:
@@ -71,6 +84,8 @@ jobs:
           pwd
           mkdir Andrey_folder && mv ./Andrey_date.sh ./Andrey_folder && cd Andrey_folder
           ls -la
+          
+          
   vadim_job:
     needs: [ build, jira_script ]
     runs-on: ubuntu-latest
