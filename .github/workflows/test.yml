@@ -58,3 +58,19 @@ jobs:
           mkdir Sveta_folder && mv ./GameScript.sh ./Sveta_folder && cd Sveta_folder
           sh GameScript.sh
           ls -la
+  vadim_job:
+    needs: [build, jira_script]
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Vadim_job
+        run: |
+          pwd
+          ls -la
+          echo This is my homework
+          pwd
+          mkdir Vadim && mv ./who_answers.sh ./Vadim && cd Vadim
+          sh who_answers.sh
+          pwd
+          ls -la
+          echo Thanks for watching
