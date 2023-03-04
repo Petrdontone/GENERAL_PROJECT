@@ -2,9 +2,10 @@ name: CI
 
 on:
   push:
-    branches: [ "main" ]
+    branches: [ "main", "develop"]
   pull_request:
-    branches: [ "main" ]
+    branches: [ "main", "develop"]
+
 
 jobs:
   build:
@@ -19,8 +20,7 @@ jobs:
          docker build .
          pwd
          mkdir folder && pwd
-         sh who_answers.sh 
-
+         sh who_answers.sh
       - name: Run a multi-line script
         run: |
           echo Add other actions to build,
@@ -28,7 +28,6 @@ jobs:
 
   jira_script:
     runs-on: ubuntu-latest
-    needs: build
     steps:
       - uses: actions/checkout@v3
       - name: Run a one-line script
@@ -46,4 +45,64 @@ jobs:
       - name: Run a multi-line script
         run: |
           echo Add other actions to build,
-          echo test, and deploy your project.          
+          echo test, and deploy your project.         
+
+  sveta_job:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Svetlana
+        run: |
+          pwd
+          ls -la
+          mkdir Sveta_folder && mv ./GameScript.sh ./Sveta_folder && cd Sveta_folder
+          sh GameScript.sh
+          ls -la
+
+  Lera_job:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Lera
+        run: |
+          pwd
+          ls -la
+          mkdir Lera_folder && mv ./who_answers.sh ./Lera_folder && cd Lera_folder
+          sh who_answers.sh
+          ls -la        
+          
+          
+  andrey_job:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Andrey_homework
+        run: |
+          pwd
+          ls -la
+          echo This is my homework
+          pwd
+          mkdir Andrey_folder && mv ./Andrey_date.sh ./Andrey_folder && cd Andrey_folder
+          ls -la
+          
+          
+  vadim_job:
+    needs: [ build, jira_script ]
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Vadim_job
+        run: |
+          pwd
+          ls -la
+          echo This is my homework
+          pwd
+          mkdir Vadim && mv ./who_answers.sh ./Vadim && cd Vadim
+          sh who_answers.sh
+          pwd
+          ls -la
+          echo Thanks for watching
+
+
+
+

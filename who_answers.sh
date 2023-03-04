@@ -1,5 +1,6 @@
-if [ -e /c/Users/Vadim/general_project/GENERAL_PROJECT/students.txt ]; then
-  rm /c/Users/Vadim/general_project/GENERAL_PROJECT/students.txt
+#!/bin/bash
+if [ -e students.txt ]; then
+  rm students.txt
   echo "Список студентов очищен"
  else
   echo "Списка студентов нет"
