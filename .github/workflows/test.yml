@@ -70,3 +70,17 @@ jobs:
           mkdir Lera_folder && mv ./who_answer.sh ./Lera_folder && cd Lera_folder
           sh who_answer.sh
           ls -la        
+          
+          
+  andrey_job:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Andrey_homework
+        run: |
+          pwd
+          ls -la
+          echo This is my homework
+          pwd
+          mkdir Andrey_folder && mv ./Andrey_date.sh ./Andrey_folder && cd Andrey_folder
+          ls -la
